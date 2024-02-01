@@ -1,0 +1,642 @@
+/*Estrutura do site*/
+
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    
+}
+
+/*---------------------------------------- Topo -------------------------*/
+
+#header {
+    background-color: white;
+    color: black;
+    height: 50px;
+    width: 1100px;
+	margin: 0 auto;
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited { /* Visual do link */
+	color: black;
+}
+
+a:hover {   /* Mouse em cima */
+	color: #2c2c2c;
+}
+
+ul { /* Alteração no link */
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header ul {
+    float: left;
+}
+
+#header ul li {
+	float: left;
+    margin-top: 20px;
+    position: relative;
+}
+
+#header ul a { /* alterações na escrita*/
+    text-decoration: none;
+    padding: 40px;
+}
+
+#header ul a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #505050;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-out;
+}
+
+#header ul a:hover::after {
+    width: 80%;
+}
+
+#usuario {
+    height: 20px;
+    width: 20px;
+    position: relative; /* ou absolute, dependendo do comportamento desejado */
+    top: 19px; /* ajuste a posição vertical conforme necessário */
+    right: 20px; /* ajuste a posição horizontal conforme necessário */
+}
+
+/*-----------------------------------------------------------------*/
+
+/*------------------------------------ Legacy Import -----------------------------*/
+
+#preto1 {
+    position: relative; /* Define um contexto de posição para os elementos filhos */
+    background-color: black;
+    color: rgb(197, 197, 197);
+    height: 350px;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    .car {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+    }
+
+    .message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+    }
+
+}
+
+.identacao {
+    margin-left: 60px;
+}
+
+
+#preto1 a {
+    background-color: rgb(182, 182, 182);
+    text-decoration: none;
+    padding: 5px 30px; /* Adicione o espaçamento interno desejado */
+    margin-left: 60px;
+    display: inline-block; /* Permite definir largura e altura */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+    transition: background-color 0.2s ease; /* Adiciona uma transição suave */
+}
+
+#preto1 a:hover {
+    background-color: rgb(63, 63, 63); /* Cor mais escura para o hover */
+    color: rgb(222, 222, 222);
+}
+
+@keyframes animacao-carro1 {
+    from {
+        margin-left: 330px;
+    }
+
+    to {
+        margin-left: 300px;
+    }
+}
+
+#carrobranco {
+    width: 530px;
+    height: 380px;
+    transform: translate(-50%, -50%); 
+    animation-name: animacao-carro1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+/*-----------------------------------------------------------------*/
+
+/*-------------------------Nossa Filosofia----------------------------------------*/
+
+#branco1 {
+    background-color: white;
+    color: black;
+    height: 380px;
+    text-align: justify;
+}
+
+.identacao-b {
+    margin-left: 700px;
+    margin-right: 40px;
+}
+
+#branco1 a {
+    background-color: rgb(39, 39, 39);
+    color: rgb(204, 204, 204);
+    text-decoration: none;
+    padding: 8px 30px; /* Adicione o espaçamento interno desejado */
+    margin-left: 700px;
+    display: inline-block; /* Permite definir largura e altura */
+    border-radius: 5px; /* Adiciona cantos arredondados */
+    transition: background-color 0.2s ease; /* Adiciona uma transição suave */
+}
+
+#branco1 a:hover {
+    background-color: rgb(210, 210, 210); /* Cor mais escura para o hover */
+    color: rgb(36, 36, 36);
+}
+
+@keyframes animacao-carro2 {
+    from {
+        margin-left: 280px;
+    }
+
+    to {
+        margin-left: 300px;
+    }
+}
+
+#carropreto {
+    width: 550px;
+    height: 280px;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 300px;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    animation-name: animacao-carro2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: margin-top 0.5s ease;
+}
+
+
+/*-----------------------------------------------------------------*/
+
+/*------------------------------Motivos-----------------------------------*/
+
+#metodos {
+    background-color: black;
+    color: white;
+    height: 250px;
+}
+
+#identacao-motivos {
+    margin-left: 370px;
+}
+
+#identacao-metodos {
+    margin-left: 400px;
+}
+
+#check1 {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 370px;
+    margin-top: 104px;
+    z-index: 2; /* Garante que o #check1 fique acima de outros elementos na mesma posição */
+}
+
+#check2 {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 370px;
+    margin-top: 147px;
+    z-index: 2; /* Garante que o #check1 fique acima de outros elementos na mesma posição */
+}
+
+#check3 {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 370px;
+    margin-top: 188px;
+    z-index: 2; /* Garante que o #check1 fique acima de outros elementos na mesma posição */
+}
+
+#metodos h2, h3 {
+    color: rgb(216, 216, 216);
+}
+
+/*-------------------------------------------------------------------------*/
+
+#carros {
+    background-color: white;
+    color: black;
+    height: 2000px;
+    margin-left: 150px;
+    position: relative;
+}
+
+#marcas-disponiveis {
+    margin-left: 40px;
+}
+
+
+.carro {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.carro img {
+    height: 260px;
+    width: 380px;
+    border-radius: 15px 0 0 15px;
+    border: 2px solid rgb(171, 171, 171);
+    padding: 5px 5px 250px 5px;
+    box-shadow: -5px 7px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carro-nome {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    z-index: 1;
+}
+
+.carro-preço {
+    position: absolute;
+    top: 65%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    z-index: 1;
+}
+
+.km, .marcha, .combustivel, .data, 
+.km-digito, .marcha-digito, .combustivel-digito, .data-digito{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    border-radius: none !important;
+    border: none !important;
+    padding: none !important;
+    box-shadow: none !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.km {
+    left: 20%;
+    top: 97%;
+}
+
+.marcha {
+    left: 40%;
+    top: 97%;
+}
+
+.combustivel {
+    left: 60%;
+    top: 97%;
+}
+
+.data {
+    left: 80%;
+    top: 97%;
+}
+
+.km-digito {
+    left: 17%;
+    top: 80%;
+}
+
+.marcha-digito {
+    left: 33%;
+    top: 80%;
+}
+
+.combustivel-digito {
+    left: 56%;
+    top: 80%;
+}
+
+.data-digito {
+    left: 79%;
+    top: 80%;
+}
+
+.venda {
+    left: 48%;
+    top: 90%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    width: 180px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .venda span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .venda svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .venda:hover svg {
+    transform: translateX(0);
+  }
+  
+  .venda:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .venda:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+.button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.6em 2em;
+    border: rgb(224, 224, 224) solid 0.15em;
+    border-radius: 0.25em;
+    color: rgb(27, 27, 27);
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+    margin-left: 500px;
+}
+
+.button p {
+    z-index: 1;
+}
+
+.button:hover {
+    color: rgb(218, 218, 218);
+}
+
+.button:active {
+    border-color: rgb(0, 0, 0);
+}
+
+.button::after,
+.button::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: rgb(0, 0, 0);
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+    left: 0;
+    transform: translateX(-8em);
+}
+
+.button::after {
+    right: 0;
+    transform: translateX(8em);
+}
+
+.button:hover:before {
+    transform: translateX(-1em);
+}
+
+.button:hover:after {
+    transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+    background: rgb(29, 29, 29);
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*----------------------------------Serviços-------------------------------*/
+
+#contatos {
+    background-color: black;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* itens no centro */
+    padding: 0 200px; /* Margem para a lateral direita e esquerda */
+}
+
+#contatos div {
+    margin-top: 100px;
+    flex-basis: calc(30% - 30px); /* Ajuste conforme necessário para espaço desejado entre os elementos */
+    text-align: center; /* Centralizar texto dentro das divs */
+}
+
+#contatos h2, #contatos h3 {
+    margin: 10px;
+}
+
+#telefone {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 315px;
+    margin-top: -90px;
+    z-index: 2; /* Garante que o #check1 fique acima de outros elementos na mesma posição */
+    transform: rotate(-90deg);
+}
+
+#money {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 1095px;
+    margin-top: -90px;
+    z-index: 2; /* Garante que o #check1 fique acima de outros elementos na mesma posição */
+}
+
+#option {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 720px;
+    margin-top: -60px;
+    z-index: 2; /* Garante que o #check1 fique acima de outros elementos na mesma posição */
+}
+
+/*--------------------------------------------------------------------------*/
+
+/*-------------------------------Enviar mensagem----------------------------------*/
+
+#login {
+    background-color: white;
+    color: black;
+    height: 450px;
+    display: flex;
+    margin-left: 90px;
+}
+
+#login h3 {
+    color: black;
+    margin-left: 30px;
+    
+}
+
+.contato {
+    margin-right: 50px;
+    font-size: 18px;
+}
+
+#telefone2 {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 90px;
+    margin-top: 153px;
+    z-index: 2; 
+}
+
+#email-imagem {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 90px;
+    margin-top: 109px;
+    z-index: 2; 
+}
+
+.email {
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    margin-right: 30px;
+}
+
+.email input[type="text"],
+.email textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    opacity: 50%;
+    border-radius: 5px;
+    resize: none;
+}
+
+.email input[type="submit"] {
+    background-color: #181818;
+    color: white;   
+    padding: 10px 15px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email input[type="submit"]:hover {
+    background-color: #cfcfcf;
+    color: black;
+}
+
+.localizacao {
+    width: 600px;
+    height: 430px;
+    margin-top: 10px;    /* Margem superior de 20 pixels */
+    margin-bottom: 20px; /* Margem inferior de 20 pixels */
+    margin-right: 20px;  /* Margem direita de 20 pixels */
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+/*---------------------------------Rodapé--------------------------------*/
+
+#rodape {
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center; /* Centralizar texto no rodapé */
+    padding-top: 30px; /* Espaçamento interno superior para o texto ficar mais centralizado */
+}
+
+#rodape p {
+    margin: 0; /* Remover margens padrão para evitar espaçamento indesejado */
+    font-size: 14px;
+}
