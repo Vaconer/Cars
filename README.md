@@ -26,6 +26,7 @@ O Lecay Import é um site que apresenta uma variedade de carros importados em um
 
 - HTML5
 - CSS3
+- Javacript
 
 ## Contribuições
 
