@@ -6,7 +6,7 @@ Bem-vindo ao repositório do Lecay Import! Este projeto é uma página estática
 
 O Lecay Import é um site que apresenta uma variedade de carros importados em um showroom virtual. Esta página é destinada a fornecer aos visitantes uma visão geral dos carros disponíveis, com imagens atraentes e informações básicas sobre cada veículo.
 
-![ezgif-2-4d9568bb12](https://github.com/Vaconer/Cars/assets/106969683/18b28cbe-679c-4a43-8de4-c0efd3220cc3)
+![ezgif-2-1871eb46b5](https://github.com/Vaconer/Cars/assets/106969683/2bf18891-b454-4ce4-97dd-3a4425569b2f)
 
 [Legacy Import](https://vaconer.github.io/Cars/)
 
